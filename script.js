@@ -1,19 +1,34 @@
-//Make a grid 
-function makeGrids(size) {
-    let screen = document.querySelector(".container");
-   
+//Make a grid sqaure
+const screen = document.querySelector(".container");
+
+
+//Initial grid Size
+let size =16;
+function makeGrids() {
+    const square = 960 / size
     
-    for (let i = 0; i < size; i++) {
-        for (let j = 1; j < size; j++) {
-            let column = document.createElement("div");
-       column.classList.add("column");
-       
-     
-       screen.appendChild(column)
-}
+   for (let i = 0; i < size * size; i++) {
       
-    }
-    
-  }
+            let box = document.createElement("div");
+       box.classList.add("column");
+       
+       box.style.width = `${square}px`
+       box.style.height = `${square}px`
+
+ box.addEventListener('mouseover',() =>{
+  box.style.background = "blue";})
+
   
-  makeGrids(90);
+
+     
+     screen.appendChild(box)
+}
+
+
+}   
+
+
+   
+
+  
+  makeGrids();
