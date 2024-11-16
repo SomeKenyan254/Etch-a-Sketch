@@ -1,21 +1,19 @@
 //Make a grid sqaure
 const screen = document.querySelector(".container");
 
+
 const button = document.querySelector("#btn");
-function randomColor(){
-  color =  math.fl
-}
 
 function makeGrids(size) {
-  
-  const square = 960 / size
+ 
+  const square = 600/ size
 //Clear previous grid
   screen.innerHTML = "";
     for (let i = 0; i < size * size; i++) {
           let box = document.createElement("div");
              box.classList.add("column");
-             screen.style.width = "500px"
-              screen.style.height = "500px"
+           screen.style.width = "600px"
+              screen.style.height = "600px"
             
              
              box.style.width = `${square}px`
